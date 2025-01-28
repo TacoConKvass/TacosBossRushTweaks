@@ -10,8 +10,12 @@ namespace TacosBossRushTweaks;
 
 public class TacosBossRushTweaks : Mod {
 	public override void Load() {
-		BossRushDialogueSystem.BossRushDialogue[BossRushDialoguePhase.StartRepeat] = BossRushDialogueSystem.BossRushDialogue[BossRushDialoguePhase.Start];
 		OriginalMusic.Apply();
+	}
+
+	public override void PostSetupContent() {
+		if (ModContent.GetInstance<TacosBossRushDamageTweaksConfig>().LongIntro)
+			BossRushDialogueSystem.BossRushDialogue[BossRushDialoguePhase.StartRepeat] = BossRushDialogueSystem.BossRushDialogue[BossRushDialoguePhase.Start];
 	}
 
 	public override void Unload() {

@@ -1,24 +1,30 @@
 Configs: {
 	TacosBossRushTweaksConfig: {
 		DisplayName: Boss Rush Tweaks
-
-		Headers: {
-			Music: Music
-		}
+		Headers.Music: Music
 
 		UseBossRushMusic: {
 			Label: Use Boss Rush Music
-			Tooltip: ""
+			Tooltip: If the Boss Rush specific music should play. Turn off to listen to the per boss soundtrack.
 		}
 	}
 
 	TacosBossRushDamageTweaksConfig: {
-		DisplayName: Boss Rush Damage Tweaks
-		Headers.Damage: Damage
+		DisplayName: Boss Rush Server Side Tweaks
+
+		Headers: {
+			Damage: Damage
+			Dialogue: Dialogue
+		}
 
 		MaxDamageReduction: {
 			Label: Max Damage Reduction
-			Tooltip: ""
+			Tooltip: Defines how high the bosses Damage Reduction can go.
+		}
+
+		LongIntro: {
+			Label: Repeat Long Intro
+			Tooltip: Repeats the long boss rush intro every time the event is started
 		}
 	}
 }

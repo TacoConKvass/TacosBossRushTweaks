@@ -19,4 +19,9 @@ public class TacosBossRushDamageTweaksConfig : ModConfig
 	[Header("Damage")]
 	[DefaultValue(.95f)]
 	public float MaxDamageReduction;
+
+	[Header("Dialogue")]
+	[ReloadRequired]
+	[DefaultValue(true)]
+	public bool LongIntro;
 }
