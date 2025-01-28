@@ -11,7 +11,7 @@
 	<!-- References -->
 	<ItemGroup>
         <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" />
-		<Reference Include="..\ModAssemblies\CalamityMod_v2.0.4.5.dll" Publicize="true"/>
+		<Reference Include="../ModAssemblies/CalamityMod.dll" Publicize="true"/>
 	</ItemGroup>
 
 </Project>
