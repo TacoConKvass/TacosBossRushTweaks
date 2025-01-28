@@ -1,1 +1,7 @@
-Modify this file with a description of your mod.
+Commissioned by: cassiexxrose in the TML Discord server.
+
+Boss Rush feels to easy for you? We have a solution!
+During Boss Rush, all bosses have reactive Damage Reduction - the lower their HP gets, the more damage they will resist!
+Also has config options for enabling:
+- normal music for bosses during Boss Rush (off by default)
+- repeating the introductory Boss Rush monologue (on by default)
