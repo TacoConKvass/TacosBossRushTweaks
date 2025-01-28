@@ -1,0 +1,5 @@
+displayName = Calamity Boss Rush Tweaks
+author = TacoConKvass
+version = 1.0.0
+modReferences = CalamityMod
+side = both

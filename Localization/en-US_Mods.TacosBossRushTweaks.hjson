@@ -1,0 +1,20 @@
+Configs: {
+	TacosBossRushTweaksConfig: {
+		DisplayName: Tacos Boss Rush Tweaks Config
+
+		Headers: {
+			Music: Music Header
+			Damage: Damage Header
+		}
+
+		UseBossRushMusic: {
+			Label: Use Boss Rush Music
+			Tooltip: ""
+		}
+
+		MaxDamageReduction: {
+			Label: Max Damage Reduction
+			Tooltip: ""
+		}
+	}
+}
