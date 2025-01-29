@@ -12,13 +12,26 @@ public class ReactiveDR : GlobalNPC
 	public override bool InstancePerEntity => true;
 
 	public bool SpawnedInBossRush;
+	int Timer;
 
 	public override void OnSpawn(NPC npc, IEntitySource source) {
 		SpawnedInBossRush = BossRushEvent.BossRushActive && CalamityUtils.IsABoss(npc);
+		Timer = 0;
 	}
 
-	public override bool PreAI(NPC npc) {
-		if (SpawnedInBossRush) npc.takenDamageMultiplier = Math.Clamp(npc.life / (float)npc.lifeMax, 1 - ModContent.GetInstance<TacosBossRushDamageTweaksConfig>().MaxDamageReduction, 1f);
-		return true;
+	public override void AI(NPC npc) => Timer++;
+
+	public override void ModifyIncomingHit(NPC npc, ref NPC.HitModifiers modifiers) {
+		if (!SpawnedInBossRush) return;
+
+		float healthRatio = npc.life / (float)npc.lifeMax;
+		float timeRatio = Timer / CalamityMod.CalamityMod.bossKillTimes[npc.type];
+
+		if (healthRatio + timeRatio >= 1) return;
+
+		float baseDR = npc.Calamity().DR;
+
+		float reactiveDR = ((1 - baseDR) * 10) - (((1 - baseDR) * 10) / (2 - timeRatio - healthRatio));
+		modifiers.FinalDamage *= Math.Clamp(1 / reactiveDR, 0, 1); 
 	}
 }
