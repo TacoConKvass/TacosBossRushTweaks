@@ -1,2 +1,2 @@
-1.1.0
-- Redid reactive DR calculation to be in line with official Calamity formula found [on the wiki](https://calamitymod.wiki.gg/wiki/Damage_reduction#Reactive_Damage_Reduction)
+1.1.1
+- Fixed reactive DR calculation
